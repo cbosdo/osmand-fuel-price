@@ -207,7 +207,7 @@ done
 create_obf "$osmdir" "$obfdir"
 rm $obfdir/*.gen.log
 
-for f in $(ls -1 $obfdir*.obf); do
+for f in $(ls -1 $obfdir/*.obf); do
     newname=$(echo "$f" | sed "s/_2//")
     mv $f $newname
 done
